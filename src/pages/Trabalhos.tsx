@@ -1,24 +1,21 @@
 import Layout from "@/components/Layout";
 
 const Trabalhos = () => {
-  // Array de placeholders para a galeria
-  // TODO: Substituir pelos caminhos reais das imagens quando disponíveis
-  // Exemplo: { id: 1, src: "/images/trabalho-01.jpg", alt: "Descrição do trabalho" }
   const trabalhos = [
-    { id: 1, placeholder: true },
-    { id: 2, placeholder: true },
-    { id: 3, placeholder: true },
-    { id: 4, placeholder: true },
-    { id: 5, placeholder: true },
-    { id: 6, placeholder: true },
-    { id: 7, placeholder: true },
-    { id: 8, placeholder: true },
-    { id: 9, placeholder: true },
+    { id: 1, src: "public/images/img_1.jpeg", alt: "Trabalho artesanal 1",  },
+    { id: 2, src: "public/images/img_2.jpeg", alt: "Trabalho artesanal 2", },
+    { id: 3, src: "public/images/img_3.jpeg", alt: "Trabalho artesanal 3", },
+    { id: 4, src: "public/images/img_4.jpeg", alt: "Trabalho artesanal 4", },
+    { id: 5, src: "public/images/img_5.jpeg", alt: "Trabalho artesanal 5", },
+    { id: 6, src: "public/images/img_6.jpeg", alt: "Trabalho artesanal 6",  },
+    { id: 7, src: "public/images/img_7.jpeg", alt: "Trabalho artesanal 7", },
+    { id: 8, src: "public/images/img_8.jpeg", alt: "Trabalho artesanal 8", },
+    { id: 9, src: "public/images/img_9.jpeg", alt: "Trabalho artesanal 9", },
   ];
 
   return (
     <Layout>
-      {/* Header da página */}
+      {/* Header */}
       <section className="bg-linen py-12 md:py-16">
         <div className="container">
           <div className="max-w-2xl mx-auto text-center">
@@ -36,7 +33,7 @@ const Trabalhos = () => {
       <section className="py-4 bg-secondary/30 border-y border-border">
         <div className="container">
           <p className="text-center text-sm text-muted-foreground">
-            As imagens são apenas exemplos. Preços e disponibilidade sob consulta.
+            Imagens ilustrativas. Preços e disponibilidade sob consulta.
           </p>
         </div>
       </section>
@@ -48,46 +45,19 @@ const Trabalhos = () => {
             {trabalhos.map((trabalho) => (
               <div
                 key={trabalho.id}
-                className="aspect-square bg-card border border-border rounded-md overflow-hidden group"
+                className="bg-card border border-border rounded-md overflow-hidden group"
               >
-                {trabalho.placeholder ? (
-                  // Placeholder - será substituído pelas imagens reais
-                  // TODO: Substituir este placeholder pela tag <img> com a imagem real
-                  // Exemplo: <img src="/images/trabalho-01.jpg" alt="Descrição" className="w-full h-full object-cover" />
-                  <div className="w-full h-full flex items-center justify-center bg-muted/50">
-                    <div className="text-center p-4">
-                      <div className="w-12 h-12 bg-border rounded-full mx-auto mb-2 flex items-center justify-center">
-                        <span className="text-muted-foreground text-lg">📷</span>
-                      </div>
-                      <p className="text-xs text-muted-foreground">
-                        Imagem {trabalho.id}
-                      </p>
-                    </div>
-                  </div>
-                ) : (
-                  // Quando houver imagem real, usar este formato:
-                  // <img 
-                  //   src={trabalho.src} 
-                  //   alt={trabalho.alt} 
-                  //   className="w-full h-full object-cover group-hover:scale-105 transition-transform duration-300" 
-                  // />
-                  null
-                )}
+                <div className="aspect-square overflow-hidden">
+                  <img
+                    src={trabalho.src}
+                    alt={trabalho.alt}
+                    className="w-full h-full object-cover group-hover:scale-105 transition-transform duration-300"
+                  />
+                </div>
+
               </div>
             ))}
           </div>
-
-          {/* Instrução para adicionar mais imagens */}
-          {/* 
-            INSTRUÇÕES PARA ADICIONAR IMAGENS:
-            
-            1. Coloque as imagens na pasta /public/images/
-            2. Nomeie os arquivos de forma organizada (ex: trabalho-01.jpg, trabalho-02.jpg)
-            3. No array 'trabalhos' acima, substitua os objetos placeholder por:
-               { id: 1, src: "/images/trabalho-01.jpg", alt: "Descrição do trabalho" }
-            4. Remova a propriedade 'placeholder: true'
-            5. O componente já está preparado para exibir as imagens automaticamente
-          */}
         </div>
       </section>
 
