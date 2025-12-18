@@ -1,5 +1,5 @@
 import Layout from "@/components/Layout";
-import { MessageCircle, Instagram, MapPin, Clock, AlertCircle } from "lucide-react";
+import { MessageCircle, MapPin, Clock, AlertCircle } from "lucide-react";
 
 const Contato = () => {
   return (
@@ -54,32 +54,12 @@ const Contato = () => {
                     </p>
                     {/* TODO: Inserir número de WhatsApp aqui */}
                     <p className="text-foreground font-medium">
-                      (XX) XXXXX-XXXX
+                      (88) 99621-6889
                     </p>
                   </div>
                 </div>
               </div>
 
-              {/* Instagram */}
-              <div className="bg-card border border-border rounded-md p-6">
-                <div className="flex items-start gap-4">
-                  <div className="w-10 h-10 bg-primary/10 rounded-full flex items-center justify-center flex-shrink-0">
-                    <Instagram className="text-primary" size={20} />
-                  </div>
-                  <div>
-                    <h3 className="font-display text-lg font-semibold text-foreground mb-1">
-                      Instagram
-                    </h3>
-                    <p className="text-muted-foreground text-sm mb-2">
-                      Acompanhe os trabalhos e envie mensagem pelo Direct.
-                    </p>
-                    {/* TODO: Inserir @ do Instagram aqui */}
-                    <p className="text-foreground font-medium">
-                      @seuinstagram
-                    </p>
-                  </div>
-                </div>
-              </div>
 
               {/* Presencial */}
               <div className="bg-card border border-border rounded-md p-6">
@@ -92,7 +72,7 @@ const Contato = () => {
                       Presencialmente
                     </h3>
                     <p className="text-muted-foreground text-sm">
-                      Atendimento presencial mediante agendamento prévio por WhatsApp ou Instagram.
+                      Atendimento presencial mediante agendamento prévio por WhatsApp .
                     </p>
                   </div>
                 </div>

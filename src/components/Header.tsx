@@ -21,7 +21,7 @@ const Header = () => {
           {/* Logo / Nome */}
           <Link to="/" className="font-display text-xl md:text-2xl font-semibold text-foreground">
             {/* TODO: Inserir nome da artesã aqui */}
-            Arte em Mãos
+            Artes Valéria
           </Link>
 
           {/* Desktop Navigation */}
